@@ -1,16 +1,12 @@
 # mall
 
-## 说明
-
-> 基于SpringBoot+MyBatis的电商系统，包括前台商城系统及后台管理系统。
-
-> 如果该项目对您有帮助，您可以点右上角 "Star" 支持一下,谢谢！
-
-> 该项目已由`CODING`特别赞助，支持的可以点下赞助商链接，探索下功能即可，谢谢！
-
-> 项目交流QQ群：[553018255](http://qm.qq.com/cgi-bin/qm/qr?k=M5Edq2TiJL_ShcOEeYjwcmdGmq4zZrd_)、[959351312(满)](http://qm.qq.com/cgi-bin/qm/qr?k=V6xu5c12j9qhnMUNdDRzakNxRKzOxibQ)。
-
-> 码云项目地址：[https://gitee.com/macrozheng/mall](https://gitee.com/macrozheng/mall)
+<p>
+  <a href="#公众号"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-macrozheng-blue.svg" alt="公众号"></a>
+  <a href="https://github.com/macrozheng/mall-learning"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B-mall--learning-green.svg" alt="学习教程"></a>
+  <a href="http://qm.qq.com/cgi-bin/qm/qr?k=V6xu5c12j9qhnMUNdDRzakNxRKzOxibQ"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/QQ%E7%BE%A4-959351312-red.svg" alt="QQ群"></a>
+  <a href="http://qm.qq.com/cgi-bin/qm/qr?k=M5Edq2TiJL_ShcOEeYjwcmdGmq4zZrd_"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/QQ%E7%BE%A4-553018255-red.svg" alt="QQ群"></a>
+  <a href="https://gitee.com/macrozheng/mall"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E7%A0%81%E4%BA%91-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80-orange.svg" alt="码云"></a>
+</p>
 
 ## 前言
 
@@ -32,15 +28,15 @@
 
 ### 项目演示
 
-> 后台管理系统
+#### 后台管理系统
 
-前端项目`mall-admin-web`地址：https://github.com/macrozheng/mall-admin-web 
+前端项目`mall-admin-web`地址：https://github.com/macrozheng/mall-admin-web
 
 项目演示地址： [http://39.98.190.128/index.html](http://39.98.190.128/index.html)  
-  
+
 ![后台管理系统功能演示.gif](/document/resource/mall-admin.gif)
 
-> 前台商城系统
+#### 前台商城系统
 
 前端项目`mall-app-web`地址：敬请期待......
 
@@ -52,6 +48,7 @@
 
 ``` lua
 mall
+├── mall-common -- 工具类及通用代码
 ├── mall-mbg -- MyBatisGenerator生成的数据库操作代码
 ├── mall-admin -- 后台商城管理系统接口
 ├── mall-search -- 基于Elasticsearch的商品搜索系统
@@ -157,9 +154,10 @@ nginx | 1.10 | http://nginx.org/en/download.html
 
 ### 搭建步骤
 
-> 本地环境搭建
+> Windows环境部署
 
-- 本地安装开发环境中的所有工具并启动(只启动mall-admin,仅需安装mysql)，具体参考[deploy-windows.md](document/reference/deploy-windows.md);
+- Windows环境搭建请参考：[mall在Windows环境下的部署](https://mp.weixin.qq.com/s/Q9ybpfq8IEdbZmvlaMXJdg);
+- 安装Windows环境下的所有工具并启动(只启动mall-admin,仅需安装mysql);
 - 克隆源代码到本地，使用IDEA或Eclipse打开，并完成编译;
 - 在mysql中新建mall数据库，导入document/sql下的mall.sql文件；
 - 启动mall-admin项目：直接运行com.macro.mall.MallAdminApplication的main方法即可，
@@ -173,15 +171,16 @@ nginx | 1.10 | http://nginx.org/en/download.html
 - 在IDEA命令行中运行命令：npm run dev,访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面;
 - ELK日志收集系统的搭建：参考[elk.md](document/elk/elk.md)。
 
-> docker环境部署
+> Docker环境部署
 
-- 在VirtualBox或其他环境中安装CenterOs7.2;
-- 使用maven构建`mall-admin`、`mall-search`、`mall-portal`的docker镜像，参考[docker.md](document/reference/docker.md)中的使用maven构建Docker镜像;
-- docker下环境安装及部署请参考[docker-deploy.md](document/docker/docker-deploy.md)。
+- 在VirtualBox或其他环境中安装CenterOs7.6;
+- Docker环境的安装请参考:[开发者必备Docker命令](https://mp.weixin.qq.com/s/d_CuljDTJq680NTndAay8g)；
+- 本项目Docker镜像构建请参考:[使用Maven插件构建Docker镜像](https://mp.weixin.qq.com/s/q2KDzHbPkf3Q0EY8qYjYgw)；
+- 本项目在Docker容器下的部署请参考：[mall在Linux环境下的部署（基于Docker容器）](https://mp.weixin.qq.com/s/0fVMK107i5bBq8kGQqg8KA)。
 
 ## 项目相关文档
 
-具体详见wiki:[https://github.com/macrozheng/mall/wiki](https://github.com/macrozheng/mall/wiki)
+具体详见`mall-learning`:[https://github.com/macrozheng/mall-learning](https://github.com/macrozheng/mall-learning)
 
 ## 参考资料
 
@@ -198,6 +197,12 @@ nginx | 1.10 | http://nginx.org/en/download.html
 - [MongoDB实战(第二版)](https://book.douban.com/subject/27061123/)
 - [Kubernetes权威指南](https://book.douban.com/subject/26902153/)
 - [Pro Git](https://git-scm.com/book/zh/v2)
+
+## 公众号
+
+mall项目全套学习教程连载中，**关注公众号**第一时间获取。
+
+![公众号图片](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg)
 
 ## 许可证
 
